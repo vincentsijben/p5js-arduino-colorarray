@@ -23,10 +23,18 @@ function setup() {
 
   noCanvas();
 
-  let string = "HelloWorld";
-  let int = 12;
-  let float = 24.7;
-  let data = `<${string},${int},${float}>`;
+  // let string = "HelloWorld";
+  // let int = 12;
+  // let float = 24.7;
+  // let data = `<${string},${int},${float}>`;
+  // data = `<0,255,0+255,255,0+0,255,255+>`;
+  // data = `<0,255,0+255,255,0+>`;
+  let data = `<`;
+  for (let i=0;i<100;i++){
+    data += `255,255,${nf(i,3)}+`;
+  }
+  data += `>`;
+  // data = `<255,255,0+255,255,1+255,255,2+255,255,3+255,255,4+>`;
   
   console.log(data)
   time = new Date();
@@ -53,5 +61,5 @@ function gotData() {
   trim(currentString);                    // trim off trailing whitespace
   if (!currentString) return;             // if the incoming string is empty, do no more
   console.log(currentString);
-  console.log(`send and receive took ${new Date() - time}ms`);
+  // console.log(`send and receive took ${new Date() - time}ms`);
 }

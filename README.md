@@ -1,8 +1,10 @@
-# p5js arduino parse data
+# p5js arduino colorarray
 
-Small example to use start and end markers for sending data to Arduino board.
+reading 1201 characters from p5js and store it in array of length 100, each item containing a color (3 bytes).
 
-The function `parseData()` correctly parses the data into string, integer and float.
+This takes up 1725 bytes in total, so not much bytes left...
 
-# install
-* install the https://github.com/p5-serial/p5.serialport app to be able to map the serial bus to a web socket so p5js can communicate.
+I had to comment out the `strcpy(tempChars, receivedChars);` part, because it would double the amount of necessary bytes.
+
+
+Based on https://github.com/vincentsijben/p5js-arduino-parse-data
