@@ -103,7 +103,7 @@ void parseData() {      // split the data into its parts
 void showParsedData() {
   Serial.println("Message: ");
   
-  for (int i = 0; i < ledColorArrayLength; i++) {
+  for (int i = 0; i < ledColorArrayLength-1; i++) {
 
     Serial.print(ledColorArray[i].r);
     Serial.print("-");
